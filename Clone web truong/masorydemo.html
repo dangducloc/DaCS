@@ -1,0 +1,90 @@
+
+   
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Bootstrap 5 with Masonry!</title>
+    <style>
+        #toTop {
+    padding: 5px 3px;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    display: none;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5 mt-5">
+        <h1>Bootstrap 5 with Masonry</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card bg-primary">
+                    <div class="card-body text-white">
+                        <p style="height:200px;">This a text block A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-secondary">
+                    <div class="card-body text-white">This a text block B</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-success">
+                    <div class="card-body text-white">
+                        <p style="height:100px;">This a text block C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-info">
+                    <div class="card-body text-white">This a text block D</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark">
+                    <div class="card-body text-white">This a text block E</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='toTop'>To The Top!</div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- Masonry scripts-->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+</body>
+<!-- <script>
+  var msnry = new Masonry('.row', {
+      itemSelector: '.col',
+      percentPosition: true
+  });
+</script> -->
+<script>
+    $(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#toTop').fadeIn();
+    } else {
+        $('#toTop').fadeOut();
+    }
+});
+
+$("#toTop").click(function() {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
+</script>
+</html>
